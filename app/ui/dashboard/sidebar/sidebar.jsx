@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Sidebar.module.css";
+import styles from "./sidebar.module.css";
 import MenuLink from "./menuLink/menuLink";
 import {
   MdDashboard,
@@ -82,13 +82,19 @@ const Sidebar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.user}>
-      <Image src='/noavatar.png' alt="noavatar" width="58" height="58" />
-      <div className={styles.userDetail}>
-      <span className={styles.username}>Navin Kukreja</span>
-      <span className={styles.userTitle}>Administrator</span>
+        <Image
+          className={styles.userImage}
+          src="/noavatar.png"
+          alt="noavatar"
+          width="58"
+          height="58"
+        />
+        <div className={styles.userDetail}>
+          <span className={styles.username}>Navin K</span>
+          <span className={styles.userTitle}>Administrator</span>
+        </div>
       </div>
-      </div>
-      <ul>
+      <ul className={styles.list}>
         {menuItems.map((cat) => (
           <li key={cat.title}>
             <span className={styles.cat}>{cat.title}</span>
@@ -98,6 +104,10 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
+      <button className={styles.logout}>
+        <MdLogout />
+        Logout
+      </button>
     </div>
   );
 };
