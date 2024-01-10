@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from '../../ui/dashboard/products/products.module.css'
 
 const ProductPage = () => {
   return (
-    <div>ProductPage</div>
+    <div className={styles.container}>ProductPage</div>
   )
 }
 

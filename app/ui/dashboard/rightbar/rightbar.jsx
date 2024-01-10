@@ -1,45 +1,29 @@
-import Image from "next/image";
+import React from "react";
 import styles from "./rightbar.module.css";
-import { MdPlayCircleFilled, MdReadMore } from "react-icons/md";
+import Image from "next/image";
+import { MdPlayCircleFilled } from "react-icons/md";
 
-const Rightbar = () => {
+const rightbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.bgContainer}>
-          <Image className={styles.bg} src="/astronaut.png" alt="" fill />
+          <Image src="/astronut.png" alt="" fill />
         </div>
-        <div className={styles.text}>
-          <span className={styles.notification}>🔥 Available Now</span>
+        <div className={styles.texts}>
+          <span className={styles.notification}> Available Now </span>
           <h3 className={styles.title}>
-            How to use the new version of the admin dashboard?
+            How to use the new version of the Admin Dashboard
           </h3>
-          <span className={styles.subtitle}>Takes 4 minutes to learn</span>
+          <span className={styles.subtitle}>Takes 4 mins to learn</span>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit eius libero perspiciatis recusandae possimus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+            saepe tenetur? Quam voluptatem cum dolorum omnis eos deleniti, qui
+            eum enim. Illo doloribus ratione hic voluptatem voluptatum ducimus
+            exercitationem, sunt sint mollitia, eaque quod veritatis.
           </p>
-          <button className={styles.button}>
+          <button className={styles.subtitle}>
             <MdPlayCircleFilled />
-            Watch
-          </button>
-        </div>
-      </div>
-      <div className={styles.item}>
-        <div className={styles.text}>
-          <span className={styles.notification}>🚀 Coming Soon</span>
-          <h3 className={styles.title}>
-            New server actions are available, partial pre-rendering is coming
-            up!
-          </h3>
-          <span className={styles.subtitle}>Boost your productivity</span>
-          <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit eius libero perspiciatis recusandae possimus.
-          </p>
-          <button className={styles.button}>
-            <MdReadMore />
-            Learn
           </button>
         </div>
       </div>
@@ -47,4 +31,4 @@ const Rightbar = () => {
   );
 };
 
-export default Rightbar;
+export default rightbar;
