@@ -20,7 +20,7 @@ const AddProductPage = () => {
           name="desc"
           id="desc"
           cols="30"
-          rows="16"
+          rows="16" 
           placeholder="description"
         ></textarea>
         <button type="submit">Submit</button>
