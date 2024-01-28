@@ -4,8 +4,11 @@ import Search from "@/app/ui/dashboard/search/search";
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
+import { fetchUsers } from "@/app/lib/data";
 
-const UserPage = () => {
+const UserPage = async () => {
+  const users = await fetchUsers();
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -25,7 +28,8 @@ const UserPage = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          {users.map((user) => (
+          <tr key={user.id}>
             <td>
               <div className={styles.user}>
                 <Image
@@ -34,7 +38,7 @@ const UserPage = () => {
                   width={40}
                   height={40}
                   className={styles.userImage}
-                />{" "}
+                />
                 Navin Kukreja
               </div>
             </td>
@@ -55,6 +59,7 @@ const UserPage = () => {
               </div>
             </td>
           </tr>
+          ))}
         </tbody>
       </table>
       <Pagination />
